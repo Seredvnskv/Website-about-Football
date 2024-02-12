@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: darkgreen;
+    color: #fff;
+    font-size: 2em; 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+nav ul li {
+    display: inline-block; 
+    position: relative;
+    margin: 10px;
+}
+
+nav ul li:active {
+    border-bottom: 5px solid yellow; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+section ul {
+    list-style-type: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.animated-box {
+    width: 80px;
+    height: 80px;
+    background-color: forestgreen;
+    margin: 50px auto;
+    animation: spin 5s infinite;
+    border-radius: 50px;
+    font-size: 50px;
+    padding: 50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+}
+
+ul li ul.dropdown li {
+    display: block;
+    padding: 5px;
+    margin: 0; 
+    font-size: 15px;
+}
+
+ul li ul.dropdown {
+    width: 100%; 
+    background-color: #444;
+    position: absolute;
+    z-index: 1;
+    display: none; 
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+.Titled-Players {
+    display: inline-flex;
+    gap: 50px;
+
+    position: relative;
+    text-decoration: none;
+}
+
+div > img {
+    width: 250px;
+    height: 350px;
+}
+
+div.Titled-Players div a {
+    text-decoration: underline;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, tr, th ,td {
+    border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+
+#CampNou {
+    width: 75%;
+}
+
+#OldTrafford {
+    width: 50%;
+}
+
+#AllianzArena {
+    width: 50%;
+}
+
+.info {
+    font-size: 2em;
+}
+
+.decoration::first-letter {
+    color: firebrick;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+#Your-Page {
+    height: 100%;
+}
+
+#form {
+    height: 100%;
+}
+
+.nightMode {
+    width: 70px;
+    height: 70px;
+
+    font-size: larger;
+}
+
+button {
+    width: 175px;
+    height: 30px;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 40px;
+    font-size: 1em;
+}
+
+input[type="email"] {
+    width: 300px;
+    height: 40px;
+    font-size: 0.5em;
+}
+
+select {
+    width: 150px;
+    height: 40px;
+    font-size: 0.75em;
+}
+
+textarea {
+    font-size: 0.75em;
+}
+
+input[type="radio"]{
+    height: 25px;
+    width: 30px;
+}
+
+input[type="reset"]{
+    width: 200px;
+    height: 30px;
+    background-color: lightsalmon;
+    border-radius: 20px;
+}
+
+input[type="submit"]{
+    width: 200px;
+    height: 30px;
+    background-color: lightgreen;
+    border-radius: 20px;
+}
+
+input[type="number"] {
+    width: 300px;
+    height: 40px;
+    font-size: 1em;
+}
+
+#addMatch {
+    background-color: lightgreen;
+    border-radius: 20px;
+}
+
+#removeMatch {
+    background-color: firebrick;
+    border-radius: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.DarkMode {
+    background-color: #121212; 
+    color: #e0e0e0;           
+}
+
+.DarkMode a {
+    color: #bb86fc;    
+}
+
+.jsWarning {
+    background-color: #ffc3c3;
+    padding: 10px;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.jsOff {
+    display: none;
+}
+
+@media (max-width: 900px){
+    .Titled-Players {
+        display: flex;
+        flex-direction: column;
+    }
+}

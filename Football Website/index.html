@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My Football Hobby</title>
+  <link href="./style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll('.jsOff');
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].classList.remove('jsOff');
+        }
+    });
+  </script>
+</head>
+
+<body>
+
+    <header>
+      <h1>Football Hobby</h1>
+      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="85" r="55" fill="white" />
+      </svg>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#matches">Matches</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="./Form.html">Form</a></li>
+        <li><a href="./Your_Page.html">Your Page</a></li>
+        <li><a href="#">Stadiums</a>
+            <ul class="dropdown">
+              <li><a href="./Camp_Nou.html">Camp Nou</a></li>
+              <li><a href="./Old_Trafford.html">Old Trafford</a></li>
+              <li><a href="./Allianz_Arena.html">Allianz Arena</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <noscript>
+      <div class="jsWarning">
+          Ta strona działa najlepiej z włączonym JavaScript. Proszę włącz JavaScript w swojej przeglądarce.
+      </div>
+    </noscript>
+
+    <section id="home">
+      <h2>Welcome to My Football Hobby Website</h2>
+      <p>On this website, I will share my love and passion for football.</p>
+      <div class="animated-box">⚽</div>
+    </section>
+
+    <div class="jsOff">
+      <section id="changeButton">
+        <h2>Here you can toggle on/off dark mode</h2>
+        <div>
+            <button class="nightMode" onclick="toggleDarkMode()">
+                🌗
+            </button>
+        </div>
+      </section>
+    </div>
+
+    <section id="teams">
+      <h2>Best Football Clubs</h2>
+      <p>Best football clubs: </p>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/FC_Barcelona" target="_blank">FC Barcelona</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Real_Madrid_CF" target="_blank">Real Madrid CF</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Manchester_United_F.C." target="_blank">Manchester United F.C.</a></li>
+      </ul>
+    </section>
+
+    <section id="players">
+      <h2>Most Titled Players</h2>
+      <p>Here are most successful players:</p>
+      <div class="Titled-Players">
+        <div>
+          <img src="./img/messi.jpg" id="Messi" alt="Photo of Lionel Messi">
+          <a href="https://pl.wikipedia.org/wiki/Lionel_Messi" target="_blank"><p>Lionel Andrés Messi</p></a>
+        </div>
+        <div>
+          <img src="./img/cristiano.jpg" id="Cristiano" alt="Photo of Cristiano Ronaldo">
+          <a href="https://pl.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank"><p>Cristiano Ronaldo</p></a>
+        </div>
+        <div>
+          <img src="./img/ronaldo.jpg" id="Ronaldo" alt="Photo of Ronaldo Nazario">
+          <a href="https://pl.wikipedia.org/wiki/Ronaldo" target="_blank"><p>Ronaldo Luís Nazário</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Most Ballon D'ors in history</h2>
+      <table class="center">
+        <tr>
+          <th>Player Name</th>
+          <th>Ballon D'ors</th>
+        </tr>
+        <tr>
+          <td>Lionel Messi</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Cristiano Ronaldo</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Ronaldo Nazario</td>
+          <td>2</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="matches">
+      <h2>Football Matches</h2>
+      <p><a href="https://www.flashscore.pl/" target="_blank">
+        Here are some upcoming football matches
+      </a></p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery of My Favourite Clubs</h2>
+      <div class="gallery">
+        <a href="./img/Manchester.jpg" class="image-popup"><img src="./img/Manchester.jpg" alt="Logo of Manchester United"></a>
+        <a href="./img/Chelsea.png" class="image-popup"><img src="./img/Chelsea.png" alt="Logo of Chelsea"></a>
+        <a href="./img/Bayern.png" class="image-popup"><img src="./img/Bayern.png" alt="Logo of Bayern Munchien"></a>
+        <a href="./img/FC_Barcelona.png" class="image-popup"><img src="./img/FC_Barcelona.png" alt="Logo of Fc Barcelona"></a>
+        <a href="./img/Paris_Saint-Germain.png" class="image-popup"><img src="./img/Paris_Saint-Germain.png" alt="Logo of Paris Saint Germain"></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 My Hobby Sambor Seredyński</p>
+    </footer>
+
+    <script>
+      $(document).ready(function() {
+          $('.image-popup').magnificPopup({
+              type: 'image',
+              closeOnContentClick: true,
+              mainClass: 'mfp-img-mobile',
+              image: {
+                verticalFit: true
+              }
+          });
+      
+          $('.gallery').each(function() {
+              $(this).magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                  enabled:true
+                }
+              });
+          });
+      });
+    </script>
+
+    <script src="./script_.js"></script>
+</body>
+
+</html>

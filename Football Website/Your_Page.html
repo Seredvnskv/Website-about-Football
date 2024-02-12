@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Football Hobby</title>
+    <link href="./style.css" rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.querySelectorAll('.jsOff');
+            for(var i = 0; i < elements.length; i++) {
+                elements[i].classList.remove('jsOff');
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Football Hobby</h1>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="80" cy="85" r="55" fill="white" />
+        </svg>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Form.html">Form</a></li>
+            <li><a href="./Your_Page.html">Your Page</a></li>
+            <li><a href="#">Stadiums</a>
+                <ul class="dropdown">
+                    <li><a href="./Camp_Nou.html">Camp Nou</a></li>
+                    <li><a href="./Old_Trafford.html">Old Trafford</a></li>
+                    <li><a href="./Allianz_Arena.html">Allianz Arena</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <noscript>
+        <div class="jsWarning">
+            Ta strona działa najlepiej z włączonym JavaScript. Proszę włącz JavaScript w swojej przeglądarce.
+        </div>
+    </noscript>
+
+    <div class="jsOff">
+        <section id="changeButton">
+            <h2>Here you can toggle on/off dark mode</h2>
+            <div>
+                <button class="nightMode" onclick="toggleDarkMode()">
+                    🌗
+                </button>
+            </div>
+        </section>
+    
+        <section id="Your-Page">
+            <h2>Name your favorite player and club:</h2>
+            <div>
+                <label for="Club">Club: </label>
+                <input type="text" id="Club"><br><br>
+            </div>
+            <div>
+                <label for="Player">Player: </label>
+                <input type="text" id="Player"><br><br>
+            </div>
+            <button onclick="saveInfo()" >Save</button>
+            <button onclick="hideAndShowInfo()" >Show/Hide</button>
+    
+            <div id="User-Info">
+                <h2>Your favourite choice of club and player: </h2>
+                <p>Your favorite club is: <span id="showClub"></span></p>
+                <p>Your favorite player is: <span id="showPlayer"></span></p>
+            </div>
+            <br><br>
+            <div>
+                <input type="text" id="firstTeam" placeholder="First Team">
+                <input type="text" id="secondTeam" placeholder="Second Team">
+                <input type="number" id="firstTeamScore" placeholder="First Team Score">
+                <input type="number" id="secondTeamScore" placeholder="Second Team Score">
+                <br>
+                <button onclick="addMatchInfo()" id="addMatch">Add</button>
+                <button onclick="removeMatchInfo()" id="removeMatch">Remove</button>
+            </div>
+            
+            <div id="Match"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 My Hobby Sambor Seredyński</p>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./script_.js"></script>
+</body>
+
+</html>

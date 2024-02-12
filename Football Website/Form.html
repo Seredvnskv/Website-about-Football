@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Football Hobby</title>
+    <link href="./style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.querySelectorAll('.jsOff');
+            for(var i = 0; i < elements.length; i++) {
+                elements[i].classList.remove('jsOff');
+            }
+        });
+
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        });
+
+        $( function() {
+            $(document).tooltip();
+        });
+
+    </script>
+</head>
+<body>
+    
+    <header>
+        <h1>Football Hobby</h1>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="80" cy="85" r="55" fill="white" />
+        </svg>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Form.html">Form</a></li>
+            <li><a href="./Your_Page.html">Your Page</a></li>
+            <li><a href="#">Stadiums</a>
+                <ul class="dropdown">
+                    <li><a href="./Camp_Nou.html">Camp Nou</a></li>
+                    <li><a href="./Old_Trafford.html">Old Trafford</a></li>
+                    <li><a href="./Allianz_Arena.html">Allianz Arena</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <noscript>
+        <div class="jsWarning">
+            Ta strona działa najlepiej z włączonym JavaScript. Proszę włącz JavaScript w swojej przeglądarce.
+        </div>
+    </noscript>
+
+    <div class="jsOff">
+        <section id="changeButton">
+            <h2>Here you can toggle on/off dark mode</h2>
+            <div>
+                <button class="nightMode" onclick="toggleDarkMode()">
+                    🌗
+                </button>
+            </div>
+        </section>
+
+        <section id="form">
+            <h2>
+                Contact with me: 
+            </h2>
+            <form action="odbierz.php" method="POST">
+                <label for="Name">Name: </label><br>
+                <input type="text" id="Name" name="Name" placeholder="Your Name"><br><br>
+                
+                <label for="Surname">Surname: </label><br>
+                <input type="text" id="Surname" name="Surname" placeholder="Your Surname"><br><br>
+        
+                <label for="email">Email: </label><br>
+                <input type="email" id="email" name="email" title="I ask for your email to be able to contact with you." placeholder="Here type your email"><br><br>
+        
+                <label for="datepicker">Date of Birth: </label><br>
+                <input type="text" id="datepicker" placeholder="Your Date of Birth"><br><br>
+        
+                <label>Gender: </label>
+                <input type="radio" id="Female" name="Gender" value="Female">
+                <label for="Female">Female</label>
+                <input type="radio" id="Male" name="Gender" value="Male" checked>
+                <label for="Male">Male</label><br><br>
+
+                <label>Choose languages you can speak: </label><br><br>
+                <label>
+                    <input type="checkbox" name="option" value="english">
+                    English
+                </label>
+                <br><br>
+                
+                <label>
+                    <input type="checkbox" name="option" value="Spanish">
+                    Spanish
+                </label>
+                <br><br>
+                
+                <label>
+                    <input type="checkbox" name="option" value="German">
+                    German
+                </label>
+                <br><br>
+
+                <label for="Country">Choose your country: </label><br><br>
+                <select id="Country" name="Country">
+                    <option value="Germany">Germany</option>
+                    <option value="England">England</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Other" selected>Other</option>
+                </select><br><br>
+        
+                <label for="Comments">Comments: </label><br>
+                <textarea id="Comments" name="Comments" rows="4" cols="50"></textarea><br>
+        
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+
+        </section> 
+    </div>
+
+    <footer>
+        <p>© 2023 My Hobby Sambor Seredyński</p>
+    </footer>
+
+    <script src="./script_.js"></script>
+</body>
+
+</html>
